@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { POSTS, formatDate } from "./posts-data";
+import MetaBalls from "./MetaBalls";
+import { useTheme } from "./useTheme";
 
 // Shared page-entry animation variants
 export const pageVariants = {
@@ -40,6 +42,7 @@ interface HomePageProps {
 
 export function HomePage({ onGoToBlog, onOpenPost }: HomePageProps) {
   const featured = POSTS.slice(0, 3);
+  const { theme } = useTheme();
 
   return (
     <motion.div
@@ -51,47 +54,64 @@ export function HomePage({ onGoToBlog, onOpenPost }: HomePageProps) {
     >
       {/* ── Hero ── */}
       <section className="hero" aria-labelledby="hero-heading">
-        <motion.p
-          className="hero-eyebrow"
-          variants={fadeUp}
-          initial="initial"
-          animate="animate"
-        >
-          Personal writing
-        </motion.p>
+        <div className="hero-content">
+          <motion.p
+            className="hero-eyebrow"
+            variants={fadeUp}
+            initial="initial"
+            animate="animate"
+          >
+            Personal writing
+          </motion.p>
 
-        <motion.h1
-          id="hero-heading"
-          className="hero-title"
-          variants={fadeUp}
-          initial="initial"
-          animate="animate"
-          transition={{ delay: 0.1 }}
-        >
-          Ideas worth sitting with.
-        </motion.h1>
+          <motion.h1
+            id="hero-heading"
+            className="hero-title"
+            variants={fadeUp}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.1 }}
+          >
+            Ideas worth sitting with.
+          </motion.h1>
 
-        <motion.p
-          className="hero-subtitle"
-          variants={fadeUp}
-          initial="initial"
-          animate="animate"
-          transition={{ delay: 0.18 }}
-        >
-          Essays on thinking, technology, and the slow craft of paying attention.
-        </motion.p>
+          <motion.p
+            className="hero-subtitle"
+            variants={fadeUp}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.18 }}
+          >
+            Essays on thinking, technology, and the slow craft of paying attention.
+          </motion.p>
 
-        <motion.div
-          variants={fadeUp}
-          initial="initial"
-          animate="animate"
-          transition={{ delay: 0.26 }}
-        >
-          <button className="hero-cta" onClick={onGoToBlog} id="hero-cta-btn">
-            Read the writing
-            <span className="hero-cta-arrow" aria-hidden="true">→</span>
-          </button>
-        </motion.div>
+          <motion.div
+            variants={fadeUp}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.26 }}
+          >
+            <button className="hero-cta" onClick={onGoToBlog} id="hero-cta-btn">
+              Read the writing
+              <span className="hero-cta-arrow" aria-hidden="true">→</span>
+            </button>
+          </motion.div>
+        </div>
+
+        <div className="hero-visual">
+          <MetaBalls
+            color={theme === "dark" ? "#cccccc" : "#222222"}
+            cursorBallColor={theme === "dark" ? "#ffffff" : "#444444"}
+            cursorBallSize={2}
+            ballCount={15}
+            animationSize={30}
+            enableMouseInteraction={true}
+            enableTransparency={true}
+            hoverSmoothness={0.05}
+            clumpFactor={1}
+            speed={0.3}
+          />
+        </div>
 
         {/* Decorative label */}
         <span className="hero-rule" aria-hidden="true">est. 2026</span>

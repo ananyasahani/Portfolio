@@ -37,7 +37,19 @@ html.lenis body {
 
   --font-serif:  'Crimson Text', Georgia, 'Times New Roman', serif;
   --font-mono:   'Courier New', Courier, monospace;
+}
 
+html.dark {
+  --bg:          #161615;
+  --surface:     #232321;
+  --ink:         #f0eeea;
+  --ink-2:       #c1bfbc;
+  --muted:       #8a8784;
+  --rule:        #383735;
+  --accent:      #f0eeea;
+}
+
+:root {
   --xs:   0.78rem;
   --sm:   0.92rem;
   --base: 1.18rem;
@@ -76,6 +88,7 @@ body {
   color: var(--ink);
   font-size: var(--base);
   line-height: var(--leading-prose);
+  transition: background-color var(--t-base) var(--ease-in-out), color var(--t-base) var(--ease-in-out);
 }
 
 h1, h2, h3, h4, h5 {
@@ -222,12 +235,31 @@ button {
 /* ── Hero ── */
 .hero {
   min-height: calc(100vh - var(--nav-h));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 3rem;
   padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 8vw, 8rem);
   position: relative;
   overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-visual {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .hero-eyebrow {
@@ -409,6 +441,7 @@ button {
   line-height: 1.6;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -524,6 +557,7 @@ button {
   line-height: 1.65;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

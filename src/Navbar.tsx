@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "./useTheme";
 
 export type Page = "home" | "blog" | "post";
 
@@ -10,6 +11,7 @@ interface NavbarProps {
 
 export function Navbar({ current, onNavigate }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   function go(page: Page) {
     onNavigate(page);
@@ -46,6 +48,18 @@ export function Navbar({ current, onNavigate }: NavbarProps) {
               onClick={() => go("blog")}
             >
               Writing
+            </button>
+          </li>
+          <li>
+            <button
+              className="nav-link"
+              onClick={() => {
+                toggleTheme();
+                setMenuOpen(false);
+              }}
+              aria-label="Toggle theme"
+            >
+              {theme === "light" ? "Dark Theme" : "Light Theme"}
             </button>
           </li>
         </ul>
