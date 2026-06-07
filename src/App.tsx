@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import { Navbar, type Page } from "./Navbar";
-import { HomePage } from "./HomePage";
-import { BlogPage, PostDetail } from "./BlogPage";
-import { useLenis } from "./useLenis";
+import { Navbar, type Page } from "./components/Navbar";
+import { HomePage } from "./pages/HomePage";
+import { BlogPage, PostDetail } from "./pages/BlogPage";
+import { ProjectsPage } from "./pages/ProjectsPage";
+import { useLenis } from "./hooks/useLenis";
 import "./index.css";
 
 export function App() {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { PROJECTS, ALL_PROJECT_TAGS } from "./projects-data";
+import { PROJECTS, ALL_PROJECT_TAGS } from "@/data/projects-data";
 import { pageVariants, staggerContainer, fadeUp } from "./HomePage";
 
 export function ProjectsPage() {
