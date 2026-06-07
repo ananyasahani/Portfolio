@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { POSTS, formatDate, ALL_TAGS, type Post, type Section } from "./posts-data";
+import { POSTS, formatDate, ALL_TAGS, type Post, type Section } from "../data/posts-data";
 import { pageVariants, staggerContainer, fadeUp } from "./HomePage";
 
 // ── Secure body renderer — no innerHTML ───────────────────────────────────────

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { POSTS, formatDate } from "./posts-data";
-import MetaBalls from "./MetaBalls";
-import { useTheme } from "./useTheme";
+import { POSTS, formatDate } from "../data/posts-data";
+import MetaBalls from "../components/MetaBalls";
+import { useTheme } from "../hooks/useTheme";
 
 // Shared page-entry animation variants
 export const pageVariants = {
