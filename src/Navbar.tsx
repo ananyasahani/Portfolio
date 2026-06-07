@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "./useTheme";
 
-export type Page = "home" | "blog" | "post";
+export type Page = "home" | "blog" | "post" | "projects";
 
 interface NavbarProps {
   current: Page;
@@ -48,6 +48,15 @@ export function Navbar({ current, onNavigate }: NavbarProps) {
               onClick={() => go("blog")}
             >
               Writing
+            </button>
+          </li>
+          <li>
+            <button
+              id="nav-projects"
+              className={`nav-link${current === "projects" ? " active" : ""}`}
+              onClick={() => go("projects")}
+            >
+              Projects
             </button>
           </li>
           <li>

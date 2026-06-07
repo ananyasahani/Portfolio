@@ -676,6 +676,92 @@ hr {
 .site-footer a:hover { color: var(--muted); }
 
 /* ======================================================
+   PROJECTS PAGE
+   ====================================================== */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.project-card {
+  padding: 2.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--bg);
+  transition: transform var(--t-base) var(--ease-out-expo), box-shadow var(--t-base) var(--ease-out-expo), border-color var(--t-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--ink-2);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08);
+}
+html.dark .project-card:hover {
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.4);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-size: var(--2xl);
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.18;
+}
+
+.project-year {
+  font-size: var(--sm);
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.project-description {
+  color: var(--ink-2);
+  font-size: var(--base);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.project-links a {
+  font-size: var(--sm);
+  font-style: italic;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.project-links a:hover {
+  color: var(--muted);
+}
+
+/* ======================================================
    MOBILE
    ====================================================== */
 @media (max-width: 680px) {
