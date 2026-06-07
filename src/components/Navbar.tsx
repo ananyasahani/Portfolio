@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "./useTheme";
+import { useTheme } from "../hooks/useTheme";
 
 export type Page = "home" | "blog" | "post" | "projects";
 

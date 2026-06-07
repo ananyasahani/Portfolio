@@ -3,7 +3,6 @@ import { AnimatePresence } from "framer-motion";
 import { Navbar, type Page } from "./Navbar";
 import { HomePage } from "./HomePage";
 import { BlogPage, PostDetail } from "./BlogPage";
-import { ProjectsPage } from "./ProjectsPage";
 import { useLenis } from "./useLenis";
 import "./index.css";
 
