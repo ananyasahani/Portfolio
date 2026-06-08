@@ -142,6 +142,10 @@ export function HomePage({ onGoToBlog, onOpenPost }: HomePageProps) {
           </p>
         </div>
       </motion.section>
+      <section className='processing'>
+        <h1>section for animation made with p5.js, need to integrate it here with react within processing environemnt</h1>
+
+      </section>
 
       {/* ── Featured posts ── */}
       <section className="featured-strip" aria-labelledby="featured-heading">
