@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: portfolio-bun-lab
+    env: docker
+    plan: free
+    region: oregon # Render's default region, or they can change it
+    envVars:
+      - key: PORT
+        value: 3000
