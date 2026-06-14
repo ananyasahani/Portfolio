@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     link: 'https://example.com',
     github: 'https://github.com/ananyasahani/bun-lab',
-    tags: ['React', 'Bun', 'Framer Motion']
+    tags: ['React', 'Bun', 'Frame Motion']
   },
   {
     id: '2',

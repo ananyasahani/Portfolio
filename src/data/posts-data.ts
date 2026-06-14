@@ -20,18 +20,22 @@ export interface Section {
 export const POSTS: Post[] = [
   {
     id: '1',
-    slug: 'on-thinking-slowly',
-    title: 'On Thinking Slowly',
-    date: '2026-05-28',
+    slug: 'intro-to-ricing',
+    title: 'Intro to Ricing ',
+    date: '2026-06-09',
     readingTime: '5 min read',
-    tags: ['philosophy', 'thinking'],
+    tags: ['linux', 'Desktop Enviroment'],
     excerpt:
-      'We live in an era obsessed with fast answers and rapid iteration. But some of the most important thinking happens in the margins — during long walks, half-asleep mornings, and the blank pages between chapters.',
+      'this is a comprehensive guide to how do design and cherry pick each component that you want in your Desktop enviroment',
     body: [
       {
         type: 'paragraph',
         content:
-          'We live in an era obsessed with fast answers and rapid iteration. But some of the most important thinking happens in the margins — during long walks, half-asleep mornings, and the blank pages between chapters.',
+          'ricing it the process of highly customizing you desktop enviroment according to once preference. this tutorail is highly abased on the thing that i learned over the course of few weeks and videos made by Diinki (best youtuber btw-when it comes to linux ).',
+      },
+      {
+        type: 'paragraph',
+        content: 'there are different section neatly walking though process, from installation to writting dot files aka config files'
       },
       {
         type: 'heading2',

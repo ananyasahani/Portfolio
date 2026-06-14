@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { POSTS, formatDate } from "../data/posts-data";
 import MetaBalls from "../components/MetaBalls";
 import { useTheme } from "../hooks/useTheme";
-
+import FrogSketch from "../components/FrogSketch";
 // Shared page-entry animation variants
 export const pageVariants = {
   initial: { opacity: 0, y: 28 },
@@ -142,10 +142,19 @@ export function HomePage({ onGoToBlog, onOpenPost }: HomePageProps) {
           </p>
         </div>
       </motion.section>
-      <section className='processing'>
-        <h1>section for animation made with p5.js, need to integrate it here with react within processing environemnt</h1>
-
+      <section className="processing" aria-labelledby="processing-heading">
+        <div className="processing-header">
+          <p className="processing-label">Playground</p>
+          <h2 id="processing-heading">Pick up the frog.</h2>
+          <p className="processing-sub">
+            Click or drag anywhere on the canvas.
+          </p>
+        </div>
+        <div className="processing-canvas-wrap">
+          <FrogSketch />
+        </div>
       </section>
+
 
       {/* ── Featured posts ── */}
       <section className="featured-strip" aria-labelledby="featured-heading">

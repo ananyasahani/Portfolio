@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+
+# Version control
+.git/
+.gitignore
+
+# Docker & local config
+Dockerfile
+.dockerignore
+.env
+.env.local
+
+# Logs and temp files
+*.log
+.DS_Store
